@@ -11,8 +11,8 @@ assign instruction = Ins_memory[read_address];
 
 always @(posedge clk) begin
     if(rst == 1'b1) begin
-        for (i = 0; i < 64; i++)
-        Ins_memory[i] <= 32'h00000000;
+        for (i = 0; i < 64; i++) begin
+            Ins_memory[i] <= 32'h00000000; end
     end
     else if(rst == 1'b0)
     Ins_memory[0] <= 32'b0000000_11001_01010_000_1010_0110011; // add x10, x10, x25
