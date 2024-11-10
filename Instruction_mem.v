@@ -4,7 +4,7 @@ input [31:0] read_address;
 
 output [31:0] instruction;
 
-reg [31:0] Ins_memory [0:64]; //42 registers of 32 bit each
+    reg [31:0] Ins_memory [0:63]; //64 registers of 32 bit each
 integer i;
 
 assign instruction = Ins_memory[read_address];
