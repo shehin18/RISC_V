@@ -1,1 +1,1 @@
-# RISC_V
+Verilog implementation of 32-bit RISC_V processor.
