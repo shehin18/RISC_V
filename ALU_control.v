@@ -7,13 +7,13 @@ output reg [3:0] ALU_control_out;
 
 always @(posedge clk) begin
     case ({ALU_Op,func7,func3})
-    12'b00xxxxxxxxxx: ALU_control_out <= 4'b0010;
-    12'b01xxxxxxxxxx: ALU_control_out <= 4'b0110;
+    12'b000000000000: ALU_control_out <= 4'b0010;
+    12'b010000000000: ALU_control_out <= 4'b0110;
     12'b100000000000: ALU_control_out <= 4'b0010;
     12'b100100000000: ALU_control_out <= 4'b0110;
     12'b100000000111: ALU_control_out <= 4'b0000;
     12'b100000000110: ALU_control_out <= 4'b0010;
-        default: ALU_control_out <= 4'b0000;
+        default: ALU_control_out <= 4'bxxxx;
     endcase
 end
     
