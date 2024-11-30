@@ -35,6 +35,7 @@ Reg Registers(
 ALU ALU(
 .A(rd_data_A),
 .B(ALU_in),
+.clk(clk),
 .ALU_control(ALU_Cnrl),
 .Zero(Zero),
 .ALU_result(ALU_rslt)
